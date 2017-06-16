@@ -5,7 +5,9 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const isDev = !process.env.NODE_ENV;
 const dir = dir => path.resolve(__dirname, dir);
+const DIST = isDev ? 'tmp' : 'dist';
 
 module.exports = {
     context: dir('src'),
@@ -16,7 +18,7 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['.html', '.js', '.css', '.scss'],
+        extensions: ['.html', '.js', '.css', '.scss', '.json'],
         modules: [
             dir('src'),
             dir('node_modules'),
@@ -24,7 +26,7 @@ module.exports = {
         ]
     },
     output: {
-        path: dir('dist'),
+        path: dir(DIST),
         publicPath: '/',
         filename: 'bundle.js'
     },
@@ -33,10 +35,7 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: [/node_modules/],
-                use: [{
-                    loader: 'babel-loader',
-                    options: { presets: ['es2015'] }
-                }]
+                loader: 'babel-loader'
             },
             {
                 test: /\.html$/,
@@ -48,12 +47,29 @@ module.exports = {
                     fallback: 'style-loader',
                     loader: 'css-loader'
                 })
+            },
+            {
+                test: /\.woff2?(\?v=\d+\.\d+\.\d+)?$/,
+                loader: 'url-loader',
+                options: {
+                    limit: '10000',
+                    mimetype: 'application/font-woff',
+                    name: 'fonts/[name].[ext]'
+                }
+            },
+            {
+                test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                loader: 'file-loader',
+                options: {
+                    name: 'fonts/[name].[ext]'
+                },
+                exclude: /images/
             }
         ]
     },
     plugins: [
         new webpack.optimize.OccurrenceOrderPlugin(),
-        new CleanWebpackPlugin('dist', {
+        new CleanWebpackPlugin(DIST, {
             root: dir(''),
             verbose: true,
             dry: false
@@ -84,7 +100,7 @@ module.exports = {
         })
     ],
     devServer: {
-        contentBase: dir('dist'),
+        contentBase: dir(DIST),
         stats: 'errors-only'
     }
 }

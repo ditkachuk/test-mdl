@@ -1,0 +1,105 @@
+{
+    "projects": [
+        {
+            "name": "Healthcare",
+            "description": "Портал для ЛК кадрового резерва Минздрава",
+            "links": [
+                {
+                    "href": "http://dev.healthare.dev.experium.net/",
+                    "name": "dev.healthare.dev.experium.net"
+                },
+                {
+                    "href": "http://healthcare.dev.experium.net",
+                    "name": "healthcare.dev.experium.net"
+                }
+            ],
+            "ess": "https://ess-med.experium.ru/SupportSrv/SupportSrv.svc/Support/control#/grep",
+            "github": "https://github.com/experium/healthcare"
+        },
+
+
+        {
+            "name": "Experium-outsourcing",
+            "description": "Личные кабинеты Outsorcing для Ancor",
+            "links": [
+                {
+                    "href": "https://hr.experium.ru",
+                    "name": "hr.experium.ru"
+                },
+                {
+                    "href": "http://outtest.experium.ru",
+                    "name": "outtest.experium.ru"
+                },
+                {
+                    "href": "http://dev.outsourcing.dev.experium.net",
+                    "name": "dev.outsourcing.dev.experium.net"
+                }
+            ],
+            "ess": "http://outs.experium.ru/SupportSrv/SupportSrv.svc/Support/control#/grep",
+            "github": "https://github.com/experium/outsourcing",
+            "redmine": "https://help.experium.ru/projects/ancor/issues?utf8=%E2%9C%93&set_filter=1&f%5B%5D=status_id&op%5Bstatus_id%5D=o&f%5B%5D=cf_43&op%5Bcf_43%5D=%3D&v%5Bcf_43%5D%5B%5D=%D0%90%D0%A3%D0%A2%D0%A1%D0%9E%D0%A0%D0%A1%D0%98%D0%9D%D0%93&f%5B%5D=&c%5B%5D=tracker&c%5B%5D=status&c%5B%5D=priority&c%5B%5D=subject&c%5B%5D=assigned_to&c%5B%5D=cf_19&c%5B%5D=updated_on&group_by="
+        },
+
+        {
+            "name": "Experium-web",
+            "description": "Веб-интерфейс для программы Experium",
+            "links": [
+                {
+                    "href": "http://never.experium.net",
+                    "name": "never.experium.net"
+                },
+                {
+                    "href": "http://never.interface.dev.experium.net",
+                    "name": "never.interface.dev.experium.net"
+                },
+                {
+                    "href": "http://never.dev.interface.dev.experium.net",
+                    "name": "never.dev.interface.dev.experium.net"
+                },
+                {
+                    "href": "http://never.react.interface-branch.dev.experium.net",
+                    "name": "never.react.interface-branch.dev.experium.net"
+                }
+            ],
+            "ess": "https://msmeta6.experium.ru/SupportSrv/SupportSrv.svc/Support/control#/grep",
+            "github": "https://github.com/experium/experium-web"
+        },
+
+        {
+            "name": "JTI",
+            "description": "Анкеты выпускинов",
+            "links": [
+                {
+                    "href": "http://jti.dev.experium.net/",
+                    "name": "jti.dev.experium.net"
+                }
+            ],
+            "github": "https://github.com/experium/jti"
+        },
+
+        {
+            "name": "PMI",
+            "description": "Вакансии",
+            "links": [
+                {
+                    "href": "http://pmi.dev.experium.net/",
+                    "name": "pmi.dev.experium.net"
+                }
+            ],
+            "github": "https://github.com/experium/experium-case/tree/pmi"
+        },
+
+        {
+            "name": "Unilever",
+            "description": "Анкеты выпускинов",
+            "links": [
+                {
+                    "href": "http://unilever.dev.experium.net",
+                    "name": "unilever.dev.experium.net"
+                }
+            ],
+            "github": "https://github.com/experium/unilever"
+        }
+
+    ]
+}
